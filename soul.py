@@ -92,8 +92,8 @@ def handle_attack_command(message):
             return
         
         # Ensure the duration is within acceptable range
-        if duration > 120:
-            bot.send_message(message.chat.id, "❗ Attack ka maximum duration 120 seconds hai. Kripya duration kam karein.")
+        if duration > 300:
+            bot.send_message(message.chat.id, "❗ Attack ka maximum duration 300 seconds hai. Kripya duration kam karein.")
             return
         
         # Set flag to indicate an attack is in progress
@@ -123,5 +123,3 @@ def start_asyncio_thread():
 if __name__ == '__main__':
     Thread(target=start_asyncio_thread).start()
     bot.infinity_polling()
-    
-    
